@@ -1,0 +1,74 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Proyects.astro";
+import Github from "../components/icons/Github.astro";
+import Correo from "../components/icons/Correo.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Portfolio</title>
+    <style>
+      .blurry-spot {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        background-color: rgba(155, 93, 229, 0.8);
+        border-radius: 40%;
+        filter: blur(20px);
+      }
+
+      .spot1 {
+        top: 70%;
+        left: 0%;
+      }
+    </style>
+  </head>
+  <body class="bg-[#09101c] text-white">
+    <Navbar />
+    <div class="blurry-spot spot1"></div>
+    <main class="w-[50%] m-auto">
+      <section
+        class="flex flex-col items-center justify-center h-[450px] my-5 gap-4"
+      >
+        <h1
+          class="text-5xl sm:text-6xl font-bold tracking-tight"
+          style="opacity: 1; transform: none; color: #9b5de5; mix-blend-mode: screen;"
+        >
+          Joaquin Villarreal
+        </h1>
+        <h2 class="font-bold text-lg">Software Developer</h2>
+        <p class="text-[#8d93a1] w-[450px] text-center">
+          Transforming visions into digital experiences with a fusion of code
+          and creativity. Specializing in sleek web applications that prioritize
+          precision and user-centric design.
+        </p>
+        <article class="flex justify-center items-center gap-3">
+          <div class="relative w-[150px] h-[2px] bg-[#9b5de5]"></div>
+          <div class="flex justify-center items-center gap-2">
+            <Github />
+            <span class="text-xs font-bold">Github</span>
+            <Linkedin />
+            <span class="text-xs font-bold">Linkedin</span>
+            <Correo />
+            <span class="text-xs font-bold">villarrealjoaquin09@gmail.com</span>
+          </div>
+          <div class="relative w-[150px] h-[2px] bg-[#9b5de5]"></div>
+        </article>
+        <article class="flex gap-2">
+          <button class="bg-[#131a24] text-sm font-bold py-1 px-2 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]">Contacto</button>
+          <button class="bg-[#131a24] font-bold py-1 px-2 text-sm rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]">Agendar reunión</button>
+        </article>        
+        <Skills />
+      </section>
+
+      <Projects />
+    </main>
+  </body>
+</html>

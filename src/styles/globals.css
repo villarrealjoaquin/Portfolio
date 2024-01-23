@@ -1,0 +1,45 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  z-index: 1;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(9, 16, 28, 1), rgba(9, 16, 28, 0));
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(9, 16, 28, 1), rgba(9, 16, 28, 0));
+}
+
+.icon-scroll-container {
+  display: flex;
+  gap: 20px;
+  animation: scroll 50s linear infinite;
+}
+
+.mask-image {
+  mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+/* 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-90%);
+  }
+} */
