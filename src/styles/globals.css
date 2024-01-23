@@ -25,15 +25,10 @@
 
 .icon-scroll-container {
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
   animation: scroll 50s linear infinite;
 }
 
-.mask-image {
-  mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-}
-
-/* 
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -42,4 +37,11 @@
   100% {
     transform: translateX(-90%);
   }
+}
+
+/* .shadowed-image {
+  box-shadow: 10px 0 10px -5px #100f0f, -10px 0 10px -5px #241c1c; 
+  display: inline-block;
+  overflow: hidden; 
 } */
+
