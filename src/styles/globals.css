@@ -25,8 +25,7 @@
 
 .icon-scroll-container {
   display: flex;
-  /* gap: 20px; */
-  animation: scroll 50s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 @keyframes scroll {
@@ -38,10 +37,3 @@
     transform: translateX(-90%);
   }
 }
-
-/* .shadowed-image {
-  box-shadow: 10px 0 10px -5px #100f0f, -10px 0 10px -5px #241c1c; 
-  display: inline-block;
-  overflow: hidden; 
-} */
-

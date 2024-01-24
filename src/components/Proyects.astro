@@ -1,117 +1,112 @@
 ---
-import '../styles/globals.css';
+import "../styles/globals.css";
+import Express from "./icons/skills/Express.astro";
+import Jwt from "./icons/skills/Jwt.astro";
+import MongoDB from "./icons/skills/MongoDB.astro";
+import Nest from "./icons/skills/Nest.astro";
+import Next from "./icons/skills/Next.astro";
+import Node from "./icons/skills/Node.astro";
+import React from "./icons/skills/React.astro";
+import Tailwind from "./icons/skills/Tailwind.astro";
+import Typescript from "./icons/skills/Typescript.astro";
+import Styled from "./icons/skills/Styled.astro";
+import Css from "./icons/skills/Css.astro";
+
+// const technologySVGs = {
+//   React: <React />,
+//   Typescript: <Typescript />,
+//   Tailwind: <Tailwind />,
+//   Node: <Node />,
+//   Express: <Express />,
+//   MongoDB: <MongoDB />,
+//   Jwt: <Jwt />,
+//   Nest: <Nest />,
+//   Next: <Next />,
+//   Styled: <Styled />,
+//   Css: <Css />,
+// };
+
+const PROJECTS = [
+  {
+    title: "Gestor de gastos",
+    image: "https://i.postimg.cc/Z5ZsSyD3/image.webp",
+    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    // technologies: ['React', 'Typescript', 'Tailwind', 'Node', 'Express',' MongoDB', 'Jwt'],
+  },
+  // {
+  //   title: "Rooms (Proyecto de Salas en Tiempo Real)",
+  //   image:
+  //     "https://media.discordapp.net/attachments/855925025730985995/1199357706918703144/image.png?ex=65c23fe8&is=65afcae8&hm=82561c15af673d36df67cbdad6c93d7be8d0de413d287ba2ad9a29a92ec74eb5&=&format=webp&quality=lossless&width=412&height=676",
+  //   description: `Este es un proyecto de sistema de chat en tiempo real desarrollado
+  //           con el objetivo de implementar la librería Socket.io y explorar
+  //           tecnologías como React, TypeScript, Node.js, Express, MongoDB y JWT.`,
+  //technologies: [React, Typescript, Tailwind, Node, Express, MongoDB, Jwt],
+  // },
+  {
+    title: "Travel Nest",
+    image:
+      "https://cdn.discordapp.com/attachments/855925025730985995/1199356645768175696/image.png?ex=65c23eeb&is=65afc9eb&hm=9b031fcdca044585625a6ce7519309fb7f3c3302d121343c44a63929ae6b3df5&",
+    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    // technologies: [React, Typescript, Tailwind, Nest, Jwt],
+  },
+  {
+    title: "Reading List",
+    image:
+      "https://media.discordapp.net/attachments/855925025730985995/1199355670684762183/image.png?ex=65c23e02&is=65afc902&hm=adb9a1c70f835b11aae7c483a75799c55df3fadd13a77b818c049d97d612a8d8&=&format=webp&quality=lossless&width=930&height=676",
+    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    // technologies: [React, Typescript, Styled],
+  },
+  {
+    title: 'Pokemon game "who is that pokemon"',
+    image:
+      "https://camo.githubusercontent.com/8991b4ea6fe13bc59022f6046bc9b3cc7f3cd73480e57e3b749de3760d883b0c/68747470733a2f2f696d6775722e636f6d2f6973636a6f53422e706e67",
+    description: `Proyecto de juego de Pokémon donde los usuarios adivinan nombres
+            para ganar puntos. Utiliza React para la interfaz y una API externa
+            para obtener información de Pokémon. El objetivo es acumular la
+            mayor cantidad de puntos antes de perder toda la vida.`,
+    // technologies: [Next, Typescript, Css],
+  },
+];
 ---
 
 <!-- text-[#9b5de5] -->
-<style>
-  
-</style>
 <section>
-  <h2 class="font-bold text-xl my-2 text-[#cacacd]">Proyectos</h2>
-  <ul class="grid grid-cols-2 gap-4">
-    <li class="flex flex-col justify-between">
-      <img
-        src="https://i.postimg.cc/Z5ZsSyD3/image.webp"
-        class="shadowed-image"
-        alt="Gestor de gastos app"
-      />
-      <h3 class="my-2 font-bold text-[#b688ee]">Gestor de gastos</h3>
-      <p class="text-xs">
-        Un administrador de gastos simple y eficiente creado con Next.js para
-        ayudarlo a realizar un seguimiento de los ingresos, los gastos y
-        visualizar sus datos financieros
-      </p>
-      <div class="mt-2">
-        <button
-          class="bg-[#131a24] font-bold py-1 px-2 text-xs rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Detalles + </button
-        >
-      </div>
-    </li>
-    <li class="flex flex-col justify-around">
-      <img
-        src="https://media.discordapp.net/attachments/855925025730985995/1199357706918703144/image.png?ex=65c23fe8&is=65afcae8&hm=82561c15af673d36df67cbdad6c93d7be8d0de413d287ba2ad9a29a92ec74eb5&=&format=webp&quality=lossless&width=412&height=676"
-        class="h-[210px] shadowed-image"
-        alt="Pokemon game 'who is that pokemon' app"
-      />
-      <h3 class="my-2 font-bold text-[#b688ee]">
-        Rooms (Proyecto de Salas en Tiempo Real)
-      </h3>
-      <p class="text-xs">
-        Este es un proyecto de sistema de chat en tiempo real desarrollado con el objetivo de implementar la librería Socket.io y explorar tecnologías como React, TypeScript, Node.js, Express, MongoDB y JWT.
-      </p>
-      <div class="mt-2">
-        <button
-          class="bg-[#131a24] text-xs font-bold py-1 px-2 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Detalles +</button
-        >
-      </div>
-    </li>
-    <li class="flex flex-col justify-around">
-      <img
-        src="https://cdn.discordapp.com/attachments/855925025730985995/1199356645768175696/image.png?ex=65c23eeb&is=65afc9eb&hm=9b031fcdca044585625a6ce7519309fb7f3c3302d121343c44a63929ae6b3df5&"
-        class="h-[210px] object-cover shadowed-image"
-        alt=""
-      />
-      <h3 class="my-2 font-bold text-[#b688ee]">Travel Nest</h3>
-      <p class="text-xs">
-        Un administrador de gastos simple y eficiente creado con Next.js para
-        ayudarlo a realizar un seguimiento de los ingresos, los gastos y
-        visualizar sus datos financieros.
-      </p>
-      <div class="mt-2">
-        <button
-          class="bg-[#131a24] text-xs font-bold py-1 px-2 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Detalles +</button
-        >
-      </div>
-    </li>
-    <li class="flex flex-col justify-around">
-      <img
-        src="https://media.discordapp.net/attachments/855925025730985995/1199355670684762183/image.png?ex=65c23e02&is=65afc902&hm=adb9a1c70f835b11aae7c483a75799c55df3fadd13a77b818c049d97d612a8d8&=&format=webp&quality=lossless&width=930&height=676"
-        class="h-[210px] object-cover shadowed-image"
-        alt="Gestor de gastos app"
-      />
-      <h3 class="my-2 font-bold text-[#b688ee]">Reading List</h3>
-      <p class="text-xs">
-        Un administrador de gastos simple y eficiente creado con Next.js para
-        ayudarlo a realizar un seguimiento de los ingresos, los gastos y
-        visualizar sus datos financieros
-      </p>
-      <div class="mt-2">
-        <button
-          class="bg-[#131a24] text-xs font-bold py-1 px-2 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Detalles +</button
-        >
-      </div>
-    </li>
-    <li class="flex flex-col justify-around">
-      <img
-        src="https://camo.githubusercontent.com/8991b4ea6fe13bc59022f6046bc9b3cc7f3cd73480e57e3b749de3760d883b0c/68747470733a2f2f696d6775722e636f6d2f6973636a6f53422e706e67"
-        class="shadowed-image"
-        alt=""
-      />
-      <h3 class="my-2 font-bold text-[#b688ee]">
-        Pokemon game "who is that pokemon"
-      </h3>
-      <p class="text-xs">
-        Proyecto de juego de Pokémon donde los usuarios adivinan nombres para
-        ganar puntos. Utiliza React para la interfaz y una API externa para
-        obtener información de Pokémon. El objetivo es acumular la mayor
-        cantidad de puntos antes de perder toda la vida.
-      </p>
-      <div class="mt-2">
-        <button
-          class="bg-[#131a24] text-xs font-bold py-1 px-2 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Detalles +</button
-        >
-      </div>
-    </li>
+  <h2 class="font-bold text-xl my-3 text-[#cacacd]">Proyectos</h2>
+  <ul class="flex flex-col gap-5">
+    {
+      PROJECTS.map(({ title, image, description, technologies }) => (
+        <li class="sm:flex justify-between gap-3 w-full ">
+          <img src={image} class="sm:w-1/2 w-full" alt={title} />
+          <article class="flex flex-col sm:w-1/2 justify-between w-[250px] h-[250px] sm:h-auto">
+            <div>
+              <h3 class="my-2 font-bold text-[#b688ee]">{title}</h3>
+              <p class="text-sm">{description}</p>
+            </div>
+            <div class="mt-2 flex flex-col gap-2">
+              <div class="flex items-center gap-2">
+              
+              </div>
+              <div>
+                <button class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]">
+                  Deploy
+                </button>
+                <button class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]">
+                  Repositorio
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+      ))
+    }
   </ul>
-  <div class="flex justify-center">
-    <button
-      class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-      >Mas Proyectos</button
+
+  <div class="flex justify-center mt-3">
+    <a
+      href="https://github.com/villarrealjoaquin?tab=repositories"
+      target="_blank"
+      class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
+      >Más Proyectos</a
     >
   </div>
 </section>
