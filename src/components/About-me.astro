@@ -1,15 +1,70 @@
-<section class="bg-[#1a1f2e] text-white p-8 my-5 rounded-md shadow-md">
-  <h2 class="font-bold my-3 text-xl text-[#cacacd]">Sobre mí</h2>
-  <p class="mb-4">
-    Soy un <span class="text-[#b688ee] font-bold">desarrollador fullstack</span> con más de <span class="text-[#b688ee] font-bold">1 año de experiencia</span> en el mundo del desarrollo web. Mi enfoque se centra en la creación de <span class="text-[#b688ee] font-bold">experiencias digitales excepcionales</span> utilizando <span class="text-[#b688ee] font-bold">tecnologías modernas</span> y las mejores prácticas de desarrollo.
-  </p>
-  <p class="mb-4">
-    Originario de <span class="text-[#b688ee] font-bold">Buenos Aires, Argentina</span>, tengo <span class="text-[#b688ee] font-bold">21 años.</span> Me gusta <span class="text-[#b688ee] font-bold">contribuir al mundo del código abierto</span>. Disfruto colaborar en <span class="text-[#b688ee] font-bold">proyectos open source</span> y compartir conocimientos con la comunidad.
-  </p>
-  <p class="mb-4">
-    Mi conjunto de habilidades incluye el manejo de tecnologías como <span class="text-[#b688ee] font-bold">React</span>, <span class="text-[#b688ee] font-bold">Next.js</span>, <span class="text-[#b688ee] font-bold">TypeScript</span>, <span class="text-[#b688ee] font-bold">Node.js</span>, <span class="text-[#b688ee] font-bold">Nest.js</span>, <span class="text-[#b688ee] font-bold">Express</span>, y muchas otras. Siempre estoy buscando aprender <span class="text-[#b688ee] font-bold">nuevas tecnologías</span> y mantenerme actualizado con las <span class="text-[#b688ee] font-bold">tendencias del desarrollo</span>.
-  </p>
-  <p >
-    ¡Conéctate conmigo para discutir <span class="text-[#b688ee] font-bold">ideas</span> y <span class="text-[#b688ee] font-bold">proyectos innovadores</span>!
-  </p>
-</section>
+---
+import SectionContainer from '../components/SectionContainer.astro';
+---
+
+<h2 class="font-bold my-3 text-3xl text-[#cacacd]">Sobre mí</h2>
+<SectionContainer id="aboutme-section" class="sm:flex mb-28 h-auto gap-3 text-white  rounded-md">
+  <article class="w-1/2 hidden xl:block">
+    <img
+      src="https://i.pinimg.com/originals/98/33/5f/98335fcd764b32cae3780b1e1d5d39b4.gif"
+      class="w-full h-full object-cover rounded-md"
+      alt="background 64 bits"
+    />
+  </article>
+
+  <div class="w-full xl:w-1/2 flex m-auto flex-col items-center gap-3">
+    <article
+      class="bg-[#1a1f2e] p-5 w-[290px] sm:w-full sm:p-8 xl:w-full rounded-md"
+    >
+      <h2 class="font-bold my-3 text-xl text-[#cacacd]">Quién Soy?</h2>
+      <p class="mb-4 text-base text-balance">
+        Soy un Desarrollador fullstack con más de <span
+          class="text-[#b688ee] font-bold">1 año de experiencia</span
+        > en el mundo del desarrollo web. Originario de <span
+          class="text-[#b688ee] font-bold">Buenos Aires, Argentina</span
+        >, tengo <span class="text-[#b688ee] font-bold">21 años.</span>
+      </p>
+      <p class="text-base text-balance">
+        Mi enfoque se centra en la creación de <span
+          class="text-[#b688ee] font-bold"
+          >experiencias digitales excepcionales</span
+        > utilizando <span class="text-[#b688ee] font-bold"
+          >tecnologías modernas</span
+        > y las mejores prácticas de desarrollo. Me gusta <span
+          class="text-[#b688ee] font-bold"
+          >contribuir al mundo del código abierto</span
+        > y disfruto colaborar en <span class="text-[#b688ee] font-bold"
+          >proyectos open source</span
+        >, así como compartir conocimientos con la comunidad.
+      </p>
+    </article>
+
+    <article class="bg-[#1a1f2e] p-5 w-[290px] sm:w-full sm:p-8 xl:w-full">
+      <h2 class="font-bold my-3 text-xl text-[#cacacd]">
+        Explorando Tecnologías
+      </h2>
+      <p class="mb-4 text-balance">
+        En mi día a día, me sumerjo en un conjunto de habilidades que abarcan
+        tecnologías como <span class="text-[#b688ee] font-bold">React</span>, <span
+          class="text-[#b688ee] font-bold">Next.js</span
+        >, <span class="text-[#b688ee] font-bold">TypeScript</span>, <span
+          class="text-[#b688ee] font-bold">Node.js</span
+        >, <span class="text-[#b688ee] font-bold">Nest.js</span>, <span
+          class="text-[#b688ee] font-bold">Express</span
+        >, y muchas otras. Siempre estoy en la búsqueda de aprender <span
+          class="text-[#b688ee] font-bold">nuevas tecnologías</span
+        > y mantenerme actualizado con las <span
+          class="text-[#b688ee] font-bold">tendencias del desarrollo</span
+        >.
+      </p>
+      <p>
+        Mi pasión radica en discutir <span class="text-[#b688ee] font-bold"
+          >ideas</span
+        > y colaborar en <span class="text-[#b688ee] font-bold"
+          >proyectos innovadores</span
+        >. ¡Conéctate conmigo para compartir tus ideas y explorar nuevas
+        posibilidades!
+      </p>
+    </article>
+  </div>
+</SectionContainer>

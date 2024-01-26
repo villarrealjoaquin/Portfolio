@@ -1,20 +1,33 @@
 ---
-import Linkedin2 from "./icons/skills/Linkedin2.astro";
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
-<section class="mt-10">
-  <h2 class="font-bold my-3 text-xl text-[#cacacd]">Contacto</h2>
-  <p class="text-[#8d93a1] mb-4">
-    ¡Me gustaria conocerte! Si tienes alguna pregunta, propuesta de colaboración o simplemente quieres charlar, no dudes en contactarme.
+<SectionContainer id="contact-section" class="my-16">
+  <h2 class="font-bold my-3 text-3xl text-[#cacacd]">Contacto</h2>
+  <p class="text-[#b8bfcf] mb-6 text-sm text-pretty sm:text-base">
+    ¡Encantado de conocerte! Si tienes alguna pregunta, propuesta de colaboración
+    o simplemente te gustaría charlar, no dudes en ponerte en contacto conmigo.
   </p>
-  <article class="flex flex-col gap-6">
-    <div class="text-[#8d93a1] text-center">
-      <p class="mb-2 text-white font-bold">
-        <span class="font-bold text-[#b688ee]">Correo Electrónico:</span> villarrealjoaquin09@gmail.com
-      </p>
+  <p class="text-[#b8bfcf] mb-6 text-sm text-pretty sm:text-base">
+    Por el momento, prefiero evitar la creación de formularios para simplificar el proceso de contacto. Sin embargo, puedes enviarme un correo electrónico o conectarte conmigo en LinkedIn utilizando los siguientes enlaces:
+  </p>
+  <article class="flex flex-col gap-8 items-center">
+    <div class="flex flex-col sm:flex-row items-center gap-5">
+      <a
+        href="mailto:villarrealjoaquin09@gmail.com"
+        class="text-[#b688ee] w-[200px] text-sm sm:w-[220px] sm:text-base hover:underline font-bold"
+      >
+        ✉️ Enviar correo electrónico
+      </a>
+      <span class="text-lg">o</span>
+      <a
+        href="https://www.linkedin.com/in/joaquin-villarreal-248711236/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-[#b688ee] w-[220px] sm:w-[250px] sm:text-base hover:underline font-bold text-sm"
+      >
+        🔗 Conectá conmigo en LinkedIn
+      </a>
     </div>
-    <!-- <div class="flex justify-center">
-      <Linkedin2 />
-    </div> -->
   </article>
-</section>
+</SectionContainer>

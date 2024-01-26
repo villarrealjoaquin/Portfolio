@@ -11,102 +11,185 @@ import Tailwind from "./icons/skills/Tailwind.astro";
 import Typescript from "./icons/skills/Typescript.astro";
 import Styled from "./icons/skills/Styled.astro";
 import Css from "./icons/skills/Css.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Repositories from "./Repositories";
 
-// const technologySVGs = {
-//   React: <React />,
-//   Typescript: <Typescript />,
-//   Tailwind: <Tailwind />,
-//   Node: <Node />,
-//   Express: <Express />,
-//   MongoDB: <MongoDB />,
-//   Jwt: <Jwt />,
-//   Nest: <Nest />,
-//   Next: <Next />,
-//   Styled: <Styled />,
-//   Css: <Css />,
-// };
+const TAGS = {
+  REACT: {
+    name: "react",
+    icon: React,
+  },
+  NEXT: {
+    name: "next",
+    icon: Next,
+  },
+  TYPESCRIPT: {
+    name: "typescript",
+    icon: Typescript,
+  },
+  TAILWIND: {
+    name: "tailwind",
+    icon: Tailwind,
+  },
+  NODE: {
+    name: "node",
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "express",
+    icon: Express,
+  },
+  MONGODB: {
+    name: "express",
+    icon: MongoDB,
+  },
+  JWT: {
+    name: "jwt",
+    icon: Jwt,
+  },
+  NEST: {
+    name: "nest",
+    icon: Nest,
+  },
+  STYLED: {
+    name: "styled",
+    icon: Styled,
+  },
+  CSS: {
+    name: "css",
+    icon: Css,
+  },
+};
 
 const PROJECTS = [
   {
-    title: "Gestor de gastos",
-    image: "https://i.postimg.cc/Z5ZsSyD3/image.webp",
+    name: "Gestor de gastos",
+    image: "/877shots_so.webp",
     description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
-    // technologies: ['React', 'Typescript', 'Tailwind', 'Node', 'Express',' MongoDB', 'Jwt'],
-  },
-  // {
-  //   title: "Rooms (Proyecto de Salas en Tiempo Real)",
-  //   image:
-  //     "https://media.discordapp.net/attachments/855925025730985995/1199357706918703144/image.png?ex=65c23fe8&is=65afcae8&hm=82561c15af673d36df67cbdad6c93d7be8d0de413d287ba2ad9a29a92ec74eb5&=&format=webp&quality=lossless&width=412&height=676",
-  //   description: `Este es un proyecto de sistema de chat en tiempo real desarrollado
-  //           con el objetivo de implementar la librería Socket.io y explorar
-  //           tecnologías como React, TypeScript, Node.js, Express, MongoDB y JWT.`,
-  //technologies: [React, Typescript, Tailwind, Node, Express, MongoDB, Jwt],
-  // },
-  {
-    title: "Travel Nest",
-    image:
-      "https://cdn.discordapp.com/attachments/855925025730985995/1199356645768175696/image.png?ex=65c23eeb&is=65afc9eb&hm=9b031fcdca044585625a6ce7519309fb7f3c3302d121343c44a63929ae6b3df5&",
-    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
-    // technologies: [React, Typescript, Tailwind, Nest, Jwt],
+    technologies: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.TAILWIND],
+    deploy: "gestor-de-gastos-eight.vercel.app",
+    github: "https://github.com/villarrealjoaquin/Gestor-de-gastos",
   },
   {
-    title: "Reading List",
-    image:
-      "https://media.discordapp.net/attachments/855925025730985995/1199355670684762183/image.png?ex=65c23e02&is=65afc902&hm=adb9a1c70f835b11aae7c483a75799c55df3fadd13a77b818c049d97d612a8d8&=&format=webp&quality=lossless&width=930&height=676",
-    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
-    // technologies: [React, Typescript, Styled],
+    name: "Rooms (Proyecto de Salas en Tiempo Real)",
+    image: "673shots_so (1).webp",
+    description: `Este es un proyecto de sistema de chat en tiempo real desarrollado
+            con el objetivo de implementar la librería Socket.io y explorar
+            tecnologías como React, TypeScript, Node.js, Express, MongoDB y JWT.`,
+    technologies: [
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.NODE,
+      TAGS.EXPRESS,
+      TAGS.MONGODB,
+      TAGS.JWT,
+    ],
+    deploy: "https://www.linkedin.com/feed/update/urn:li:activity:7120866337538641920/",
+    Repositorio: "https://github.com/villarrealjoaquin/rooms"
   },
   {
-    title: 'Pokemon game "who is that pokemon"',
-    image:
-      "https://camo.githubusercontent.com/8991b4ea6fe13bc59022f6046bc9b3cc7f3cd73480e57e3b749de3760d883b0c/68747470733a2f2f696d6775722e636f6d2f6973636a6f53422e706e67",
+    name: "Travel Nest",
+    image: "/138shots_so.webp",
+    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    technologies: [
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.NEST,
+      TAGS.MONGODB,
+      TAGS.JWT,
+    ],
+    github: "https://github.com/villarrealjoaquin/Travel-nest",
+  },
+  {
+    name: "Reading List",
+    image: "/885shots_so.webp",
+    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    technologies: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.STYLED],
+    deploy: "https://pruebas-tecnicas-gold.vercel.app",
+    github: "https://github.com/villarrealjoaquin/Reading-List",
+  },
+  {
+    name: "Reclama Smart (Proyecto Freelance)",
+    image: "316shots_so.webp",
     description: `Proyecto de juego de Pokémon donde los usuarios adivinan nombres
             para ganar puntos. Utiliza React para la interfaz y una API externa
             para obtener información de Pokémon. El objetivo es acumular la
             mayor cantidad de puntos antes de perder toda la vida.`,
-    // technologies: [Next, Typescript, Css],
+    technologies: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.CSS],
+    deploy: "https://reclama-smart.vercel.app",
+    github: "https://github.com/villarrealjoaquin/reclama-smart",
+  },
+  {
+    name: 'Pokemon game "who is that pokemon"',
+    image: "673shots_so.webp",
+    description: `Proyecto de juego de Pokémon donde los usuarios adivinan nombres
+            para ganar puntos. Utiliza React para la interfaz y una API externa
+            para obtener información de Pokémon. El objetivo es acumular la
+            mayor cantidad de puntos antes de perder toda la vida.`,
+    technologies: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.CSS],
+    deploy: "https://who-is-that-pokemon-ten.vercel.app",
+    github: "https://github.com/villarrealjoaquin/Who-is-That-Pokemon",
   },
 ];
 ---
 
-<!-- text-[#9b5de5] -->
-<section>
-  <h2 class="font-bold text-xl my-3 text-[#cacacd]">Proyectos</h2>
-  <ul class="flex flex-col gap-5">
+<SectionContainer id="proyects-section" class="mb-28">
+  <h2 class="font-bold my-5 text-3xl text-[#cacacd]">Proyectos</h2>
+  <ul class="flex flex-col gap-y-10">
     {
-      PROJECTS.map(({ title, image, description, technologies }) => (
-        <li class="sm:flex justify-between gap-3 w-full ">
-          <img src={image} class="sm:w-1/2 w-full" alt={title} />
-          <article class="flex flex-col sm:w-1/2 justify-between w-[250px] h-[250px] sm:h-auto">
-            <div>
-              <h3 class="my-2 font-bold text-[#b688ee]">{title}</h3>
-              <p class="text-sm">{description}</p>
-            </div>
-            <div class="mt-2 flex flex-col gap-2">
-              <div class="flex items-center gap-2">
-              
-              </div>
+      PROJECTS.map(
+        ({ name, image, description, technologies, github, deploy }) => (
+          <li class="lg:flex justify-between gap-3 w-full">
+            <img
+              src={image}
+              class="w-full h-auto lg:w-1/2 md:h-[250px] object-cover rounded-md"
+              alt={name}
+            />
+            <article class="flex flex-col lg:w-1/2 justify-between h-[250px]">
               <div>
-                <button class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]">
-                  Deploy
-                </button>
-                <button class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]">
-                  Repositorio
-                </button>
+                <h3 class="font-bold text-[#b688ee] my-3 lg:my-0 lg:mb-3 sm:text-base">
+                  {name}
+                </h3>
+                <p class="text-xs text-balance w-56 sm:w-72 md:w-[500px] lg:w-full sm:text-sm sm:text-pretty text-[#c4cee4]">
+                  {description}
+                </p>
               </div>
-            </div>
-          </article>
-        </li>
-      ))
+              <div class="mt-2 flex flex-col gap-2">
+                <div class="flex items-center gap-2 w-48 md:w-full">
+                  {technologies && technologies.map((tech) => <tech.icon />)}
+                </div>
+                <div class="flex gap-2">
+                  {deploy && (
+                    <a
+                      href={deploy}
+                      class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
+                    >
+                      Ver online
+                    </a>
+                  )}
+                  <a
+                    href={github}
+                    class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
+                  >
+                    Repositorio
+                  </a>
+                </div>
+              </div>
+            </article>
+          </li>
+        )
+      )
     }
   </ul>
 
-  <div class="flex justify-center mt-3">
+  <article class="flex justify-center my-10">
     <a
       href="https://github.com/villarrealjoaquin?tab=repositories"
       target="_blank"
       class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
       >Más Proyectos</a
     >
-  </div>
-</section>
+  </article>
+</SectionContainer>

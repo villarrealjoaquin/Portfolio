@@ -1,13 +1,13 @@
 ---
-import Footer from "../components/Footer.astro"
+import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
 interface Props {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-const { description, title } = Astro.props
+const { description, title } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,3 +27,15 @@ const { description, title } = Astro.props
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

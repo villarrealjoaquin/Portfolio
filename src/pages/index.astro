@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/layout.astro";
+import Layout from "../layouts/Layout.astro";
 import Skills from "../components/Skills.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Proyects.astro";
@@ -8,28 +8,14 @@ import Contact from "../components/Contact.astro";
 import Github from "../components/icons/Github.astro";
 import Correo from "../components/icons/Correo.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
-
-<style>
-  .blurry-spot {
-    position: absolute;
-    width: 200px;
-    height: 150px;
-    background-color: rgba(155, 93, 229, 0.8);
-    border-radius: 40%;
-    filter: blur(20px);
-  }
-
-  .spot1 {
-    top: 70%;
-    left: 0%;
-  }
-</style>
 
 <Layout title="Portfolio - Joaquin Villarreal" description="">
   <main class="w-[50%] m-auto">
-    <section
-      class="flex flex-col items-center justify-center h-[450px] my-5 gap-4"
+    <SectionContainer
+      id="home-section"
+      class="flex flex-col items-center justify-center pt-20 h-[450px] gap-4"
     >
       <h1
         class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
@@ -51,13 +37,13 @@ import Linkedin from "../components/icons/Linkedin.astro";
 
       <article class="flex justify-center items-center gap-3">
         <div
-          class="relative invisible sm:visible w-[100px] md:w-[150px] h-[2px] bg-[#9b5de5]"
+          class="relative hidden sm:block w-[100px] md:w-[150px] h-[2px] bg-[#9b5de5]"
         >
         </div>
 
         <div class="sm:flex justify-center items-center gap-2">
           <a
-            class="flex justify-center items-center gap-1 hover:text-[#9b5de5] hover:scale-x-105 transition"
+            class="flex justify-center items-center gap-1 py-2 hover:text-[#9b5de5] hover:scale-x-105 transition"
             href="https://github.com/villarrealjoaquin"
             target="_blank"
           >
@@ -66,7 +52,7 @@ import Linkedin from "../components/icons/Linkedin.astro";
           </a>
 
           <a
-            class="flex justify-center items-center gap-1 hover:text-[#9b5de5] hover:scale-x-105 transition"
+            class="flex justify-center items-center gap-1 py-2 hover:text-[#9b5de5] hover:scale-x-105 transition"
             href="https://www.linkedin.com/in/joaquin-villarreal-248711236/"
             target="_blank"
           >
@@ -75,8 +61,8 @@ import Linkedin from "../components/icons/Linkedin.astro";
           </a>
 
           <a
-            class="flex justify-center items-center gap-1 hover:text-[#9b5de5] hover:scale-x-105 transition"
-            href="gmail"
+            class="flex justify-center items-center gap-1 py-2 hover:text-[#9b5de5] hover:scale-x-105 transition"
+            href="mailto:villarrealjoaquin09@gmail.com"
           >
             <Correo />
             <span class="text-xs font-bold">villarrealjoaquin09@gmail.com</span>
@@ -84,23 +70,26 @@ import Linkedin from "../components/icons/Linkedin.astro";
         </div>
 
         <div
-          class="relative invisible sm:visible w-[100px] md:w-[150px] h-[2px] bg-[#9b5de5]"
+          class="relative hidden sm:block w-[100px] md:w-[150px] h-[2px] bg-[#9b5de5]"
         >
         </div>
       </article>
 
       <article class="flex gap-2">
-        <button
-          class="bg-[#131a24] rounded-lg text-xs font-bold py-2 px-3 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >contáctame</button
+        <a
+          href="/#contact-section"
+          class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
+          >contáctame</a
         >
-        <button
-          class="bg-[#131a24] rounded-lg font-bold py-2 px-3 w-[100px] text-xs rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Descargar cv</button
+        <a
+          href="/cv.pdf"
+          download="cv.pdf"
+          class="bg-[#131a24] font-bold py-2 px-3 w-[100px] text-xs rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
+          >Descargar cv</a
         >
       </article>
       <Skills />
-    </section>
+    </SectionContainer>
     <Experience />
     <Projects />
     <AboutMe />

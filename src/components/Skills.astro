@@ -18,12 +18,16 @@ import Redis from "./icons/skills/Redis.astro";
 import Git from "./icons/skills/Git.astro";
 import Typescript from "./icons/skills/Typescript.astro";
 import Tailwind from "./icons/skills/Tailwind.astro";
-import '../styles/globals.css';
+import "../styles/globals.css";
 import Jwt from "./icons/skills/Jwt.astro";
 ---
 
-<section class="hidden lg:flex justify-center items-center lg:max-w-[600px] xl:max-w-[750px] gap-3 mt-6 m-auto carousel-container">
-  <article class="flex m-auto h-12 justify-center items-center gap-5 icon-scroll-container">
+<section
+  class="hidden lg:flex justify-center items-center lg:max-w-[600px] xl:max-w-[700px] gap-5 m-auto carousel-container"
+>
+  <article
+    class="flex m-auto h-12 justify-center items-center gap-5 icon-scroll-container"
+  >
     <React />
     <Next />
     <Typescript />
@@ -39,14 +43,16 @@ import Jwt from "./icons/skills/Jwt.astro";
     <MySql />
     <Jwt />
     <Supabase />
-    <Jest />    
-    <Vitest />    
-    <Css />    
-    <Redis />    
-    <Git />    
+    <Jest />
+    <Vitest />
+    <Css />
+    <Redis />
+    <Git />
   </article>
 
-  <article class="flex m-auto h-12 justify-center items-center gap-5 icon-scroll-container">
+  <article
+    class="flex m-auto h-12 justify-center items-center gap-5 icon-scroll-container"
+  >
     <React />
     <Next />
     <Typescript />
@@ -62,10 +68,54 @@ import Jwt from "./icons/skills/Jwt.astro";
     <MySql />
     <Jwt />
     <Supabase />
-    <Jest />    
-    <Vitest />    
-    <Css />    
-    <Redis />    
-    <Git />    
+    <Jest />
+    <Vitest />
+    <Css />
+    <Redis />
+    <Git />
   </article>
+
+
 </section>
+
+<style>
+ .carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-container::before,
+  .carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 10%;
+    z-index: 1;
+  }
+
+  .carousel-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(9, 16, 28, 1), rgba(9, 16, 28, 0));
+  }
+
+  .carousel-container::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(9, 16, 28, 1), rgba(9, 16, 28, 0));
+  }
+
+  .icon-scroll-container {
+    display: flex;
+    animation: scroll 40s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
