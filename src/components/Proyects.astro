@@ -1,5 +1,7 @@
 ---
+import SectionContainer from "../components/SectionContainer.astro";
 import "../styles/globals.css";
+import Css from "./icons/skills/Css.astro";
 import Express from "./icons/skills/Express.astro";
 import Jwt from "./icons/skills/Jwt.astro";
 import MongoDB from "./icons/skills/MongoDB.astro";
@@ -7,12 +9,9 @@ import Nest from "./icons/skills/Nest.astro";
 import Next from "./icons/skills/Next.astro";
 import Node from "./icons/skills/Node.astro";
 import React from "./icons/skills/React.astro";
+import Styled from "./icons/skills/Styled.astro";
 import Tailwind from "./icons/skills/Tailwind.astro";
 import Typescript from "./icons/skills/Typescript.astro";
-import Styled from "./icons/skills/Styled.astro";
-import Css from "./icons/skills/Css.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Repositories from "./Repositories";
 
 const TAGS = {
   REACT: {
@@ -164,6 +163,7 @@ const PROJECTS = [
                   {deploy && (
                     <a
                       href={deploy}
+                      target="_blank"
                       class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
                     >
                       Ver online
@@ -171,6 +171,7 @@ const PROJECTS = [
                   )}
                   <a
                     href={github}
+                    target="_blank"
                     class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
                   >
                     Repositorio

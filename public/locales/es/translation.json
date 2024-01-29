@@ -1,0 +1,17 @@
+{
+  "home": {
+    "name": "Hola, soy Joaquin Villarreal",
+    "description": "Transformando ideas en experiencias digitales con código y creatividad, especializado en aplicaciones web elegantes y centradas en el usuario."
+  },
+  "navbar": {
+    "home": "Inicio",
+    "experience": "Experiencia",
+    "proyects": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "experience": {
+    "title": "experience",
+    "": ""
+  }
+}

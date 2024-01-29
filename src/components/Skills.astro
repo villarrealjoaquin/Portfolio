@@ -18,15 +18,15 @@ import Redis from "./icons/skills/Redis.astro";
 import Git from "./icons/skills/Git.astro";
 import Typescript from "./icons/skills/Typescript.astro";
 import Tailwind from "./icons/skills/Tailwind.astro";
-import "../styles/globals.css";
 import Jwt from "./icons/skills/Jwt.astro";
+import "../styles/globals.css";
 ---
 
 <section
-  class="hidden lg:flex justify-center items-center lg:max-w-[600px] xl:max-w-[700px] gap-5 m-auto carousel-container"
+  class="hidden lg:flex lg:max-w-[600px] xl:max-w-[700px] gap-5 m-auto carousel-container"
 >
   <article
-    class="flex m-auto h-12 justify-center items-center gap-5 icon-scroll-container"
+    class="flex h-12 justify-center items-center gap-5 icon-scroll-container"
   >
     <React />
     <Next />
@@ -51,7 +51,7 @@ import Jwt from "./icons/skills/Jwt.astro";
   </article>
 
   <article
-    class="flex m-auto h-12 justify-center items-center gap-5 icon-scroll-container"
+    class="flex h-12 justify-center items-center gap-5 icon-scroll-container"
   >
     <React />
     <Next />
@@ -74,12 +74,10 @@ import Jwt from "./icons/skills/Jwt.astro";
     <Redis />
     <Git />
   </article>
-
-
 </section>
 
 <style>
- .carousel-container {
+  .carousel-container {
     position: relative;
     overflow: hidden;
   }
@@ -96,17 +94,25 @@ import Jwt from "./icons/skills/Jwt.astro";
 
   .carousel-container::before {
     left: 0;
-    background: linear-gradient(to right, rgba(9, 16, 28, 1), rgba(9, 16, 28, 0));
+    background: linear-gradient(
+      to right,
+      rgba(9, 16, 28, 1),
+      rgba(9, 16, 28, 0)
+    );
   }
 
   .carousel-container::after {
     right: 0;
-    background: linear-gradient(to left, rgba(9, 16, 28, 1), rgba(9, 16, 28, 0));
+    background: linear-gradient(
+      to left,
+      rgba(9, 16, 28, 1),
+      rgba(9, 16, 28, 0)
+    );
   }
 
   .icon-scroll-container {
     display: flex;
-    animation: scroll 40s linear infinite;
+    animation: scroll 50s infinite linear;
   }
 
   @keyframes scroll {

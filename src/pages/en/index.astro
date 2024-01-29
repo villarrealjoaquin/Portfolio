@@ -1,18 +1,18 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Skills from "../components/Skills.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Proyects.astro";
-import AboutMe from "../components/About-me.astro";
-import Contact from "../components/Contact.astro";
-import Github from "../components/icons/Github.astro";
-import Correo from "../components/icons/Correo.astro";
-import Linkedin from "../components/icons/Linkedin.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Flag from "../components/icons/Flag.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+import Skills from "../../components/Skills.astro";
+import Experience from "../../components/Experience.astro";
+import Projects from "../../components/Proyects.astro";
+import AboutMe from "../../components/About-me.astro";
+import Contact from "../../components/Contact.astro";
+import Github from "../../components/icons/Github.astro";
+import Correo from "../../components/icons/Correo.astro";
+import Linkedin from "../../components/icons/Linkedin.astro";
+import SectionContainer from "../../components/SectionContainer.astro";
+import Flag from "../../components/icons/Flag.astro";
+import { t, changeLanguage } from "i18next";
 
-changeLanguage("es");
+changeLanguage("en");
 ---
 
 <Layout
@@ -43,8 +43,7 @@ changeLanguage("es");
       <p
         class="text-[#8d93a1] text-sm w-[300px] sm:w-[350px] sm:text-base md:w-[450px] text-center"
       >
-        Transformando ideas en experiencias digitales con código y creatividad,
-        especializado en aplicaciones web elegantes y centradas en el usuario.
+        {t("home.description")}
       </p>
 
       <article class="flex justify-center items-center gap-3">

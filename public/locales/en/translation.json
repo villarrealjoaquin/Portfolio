@@ -1,0 +1,13 @@
+{
+  "home": {
+    "name": "Hi, I'm Joaquin Villarreal",
+    "description": "Transforming ideas into digital experiences with code and creativity, specializing in elegant and user-centered web applications."
+  },
+  "navbar": {
+    "home": "Home",
+    "experience": "Experience",
+    "proyects": "Proyects",
+    "about": "About me",
+    "contact": "Contact"
+  }
+}
