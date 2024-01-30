@@ -1,6 +1,7 @@
 ---
 import { t } from "i18next";
-
+import Flag from "./icons/Flag.astro";
+import FlagEn from "./icons/FlagEn.astro";
 
 const ROUTES = [
   {
@@ -42,6 +43,9 @@ const ROUTES = [
         ))
       }
     </ul>
+
+    <a href="/"><Flag /></a>
+    <a href="/en"><FlagEn /></a>
   </nav>
 
   <nav
