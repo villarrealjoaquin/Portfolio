@@ -1,78 +1,64 @@
 ---
+import { t } from "i18next";
 import SectionContainer from "../components/SectionContainer.astro";
+
+const EXPERIECES = [
+  {
+    title: "Vintex",
+    job_title: "Desarrollador de Software (Freelance)",
+    time: "Diciembre 2023 - Actualidad",
+    description:
+      "Trabajo como desarrollador de software de manera freelance y part-time. Me encargo de proyectos de desarrollo de software cada cierto tiempo",
+    key: "vintex",
+  },
+  {
+    title: "Foo Talent",
+    job_title: "Desarrollador Full Stack",
+    time: "Julio 2023 - Noviembre 2023",
+    description:
+      "Contribuí al desarrollo de aplicaciones web interactivas y seguras en una reconocida startup de abogados en Perú.",
+    items: [
+      "Diseñé interfaces de usuario para mejorar la experiencia del usuario en diversos dispositivos.",
+      "Colaboré de manera efectiva en equipos de desarrollo, facilitando lacomunicación y la resolución de problemas.",
+      "Mantuve y mejoré constantemente la calidad y el rendimiento del código.",
+    ],
+    key: "fooTalent",
+  },
+  {
+    title: "Desarrollador Freelance",
+    time: "Marzo 2022 - Actualidad",
+    description: "Trabajo freelance en diversos proyectos desde marzo de 2022.",
+    key: "freelance",
+  },
+];
 ---
 
-<SectionContainer id="experience-section" class="my-28">
-  <h2 class="font-bold my-5 text-3xl text-[#cacacd]">Experiencia</h2>
+<SectionContainer id="experience" class="my-28">
+  <h2 class="font-bold my-5 text-3xl text-[#cacacd]">{t("sections.experience")}</h2>
   <ol class="relative border-s border-gray-200 dark:border-gray-700">
-    <li class="mb-10 ms-4">
-      <div
-        class="absolute w-3 h-3 bg-[#9b5de5] rounded-full mt-1.5 -start-1.5 border border-white"
-      >
-      </div>
-      <time
-        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-        >Diciembre 2023 - Actualidad</time
-      >
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-        Anonimo - Desarrollador de Software (Freelance)
-      </h3>
-      <p
-        class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 py-2"
-      >
-        Trabajo como desarrollador de software de manera freelance y part-time.
-        Me encargo de proyectos de desarrollo de software cada cierto tiempo.
-      </p>
-      </li>
-    </li>
-    <li class="mb-10 ms-4">
-      <div
-        class="absolute w-3 h-3 bg-[#9b5de5] rounded-full mt-1.5 -start-1.5 border border-white"
-      >
-      </div>
-      <time
-        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-        >Julio 2023 - Noviembre 2023</time
-      >
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-        Foo Talent - Desarrollador Full Stack
-      </h3>
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400 py-2">
-        Contribuí al desarrollo de aplicaciones web interactivas y seguras en
-        una reconocida startup de abogados en Perú.
-      </p>
-      <ul
-        class="list-disc pl-6 mb-4 text-base font-normal text-gray-600 dark:text-gray-400"
-      >
-        <li>
-          Diseñé interfaces de usuario para mejorar la experiencia del usuario
-          en diversos dispositivos.
+    {
+      EXPERIECES.map(({ job_title, items, key }) => (
+        <li class="mb-10 ms-4">
+          <div class="absolute w-3 h-3 bg-[#9b5de5] rounded-full mt-1.5 -start-1.5 border border-white" />
+          <time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            {t(`experiences.${key}.time`)}
+          </time>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            {t(`experiences.${key}.title`)}{" "}
+            {job_title && `- ${t(`experiences.${key}.job_title`)}`}
+          </h3>
+          <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 py-2">
+            {t(`experiences.${key}.description`)}
+          </p>
+          {items && (
+            <ul class="list-disc pl-6 mb-4 text-base font-normal text-gray-600 dark:text-gray-400">
+              {items.map((_, i) => (
+                <li>{t(`experiences.${key}.items.${i}`)}</li>
+              ))}
+            </ul>
+          )}
         </li>
-        <li>
-          Colaboré de manera efectiva en equipos de desarrollo, facilitando la
-          comunicación y la resolución de problemas.
-        </li>
-        <li>
-          Mantuve y mejoré constantemente la calidad y el rendimiento del
-          código.
-        </li>
-      </ul>
-    </li>
-    <li class="ms-4">
-      <div
-        class="absolute w-3 h-3 bg-[#9b5de5] rounded-full mt-1.5 -start-1.5 border border-white"
-      >
-      </div>
-      <time
-        class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-        >Marzo 2022 - Actualidad</time
-      >
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-        Desarrollador Freelance
-      </h3>
-      <p class="text-base font-normal text-gray-500 dark:text-gray-400 py-2">
-        Trabajo freelance en diversos proyectos desde marzo de 2022.
-      </p>
-    </li>
+      ))
+    }
   </ol>
 </SectionContainer>

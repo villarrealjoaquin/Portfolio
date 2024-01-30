@@ -1,15 +1,30 @@
 ---
-import i18next, { t, changeLanguage } from "i18next";
-
-const URL = typeof window !== "undefined" && window.location.href;
-const currentlanguage = i18next.language;
-
-console.log(URL);
+import { t } from "i18next";
 
 
-const handleLanguageChange = (newLanguage: any) => {
-  changeLanguage(newLanguage);
-};
+const ROUTES = [
+  {
+    name: "home",
+    href: "/#home",
+  },
+  {
+    name: "experience",
+    href: "/#experience",
+  },
+  {
+    name: "proyects",
+    href: "/#proyects",
+  },
+  {
+    name: "about",
+    href: "/#about-me",
+  },
+  {
+    name: "contact",
+    href: "/#contact",
+  },
+];
+
 ---
 
 <header
@@ -19,31 +34,13 @@ const handleLanguageChange = (newLanguage: any) => {
     <ul
       class="flex justify-center gap-5 p-3 rounded-xl text-sm bg-[#0c1524] font-bold"
     >
-      <li
-        class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer"
-      >
-        <a href="/#home-section">{t("navbar.home")}</a>
-      </li>
-      <li
-        class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer"
-      >
-        <a href="/#experience-section">{t("navbar.experience")}</a>
-      </li>
-      <li
-        class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer"
-      >
-        <a href="/#proyects-section">{t("navbar.proyects")}</a>
-      </li>
-      <li
-        class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer"
-      >
-        <a href="/#aboutme-section">{t("navbar.about")}</a>
-      </li>
-      <li
-        class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer"
-      >
-        <a href="/#contact-section"> {t("navbar.contact")}</a>
-      </li>
+      {
+        ROUTES.map(({ name, href }) => (
+          <li class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer">
+            <a href={href}>{t(`sections.${name}`)}</a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 

@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18next';
 import SectionContainer from '../components/SectionContainer.astro';
 import AstroIcon from './icons/skills/AstroIcon.astro';
 ---
@@ -7,7 +8,7 @@ import AstroIcon from './icons/skills/AstroIcon.astro';
   <footer class="bg-[#080D1A] m-0 rounded-lg shadow">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8 flex items-center justify-center">
       <p class="flex items-center justify-center gap-2 text-sm text-gray-500 text-center m-auto dark:text-gray-400">
-        © 2024. Hecho con <span class="">💜</span> y <AstroIcon class="size-3" /> por Joaquín Villarreal
+        © 2024. {t("footer.text1")} <span class="">💜</span> {t("footer.text2")} <AstroIcon class="size-3" /> {t("footer.text3")} Joaquín Villarreal
       </p>
     </div>
   </footer>

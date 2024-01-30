@@ -1,9 +1,13 @@
 ---
-import SectionContainer from '../components/SectionContainer.astro';
+import { t } from "i18next";
+import SectionContainer from "../components/SectionContainer.astro";
 ---
 
-<h2 class="font-bold my-3 text-3xl text-[#cacacd]">Sobre mí</h2>
-<SectionContainer id="aboutme-section" class="sm:flex mb-28 h-auto gap-3 text-white  rounded-md">
+<h2 class="font-bold my-3 text-3xl text-[#cacacd]">{t("sections.about")}</h2>
+<SectionContainer
+  id="about-me"
+  class="sm:flex mb-28 h-auto gap-3 text-white rounded-md"
+>
   <article class="w-1/2 hidden xl:block">
     <img
       src="https://i.pinimg.com/originals/98/33/5f/98335fcd764b32cae3780b1e1d5d39b4.gif"
@@ -16,54 +20,72 @@ import SectionContainer from '../components/SectionContainer.astro';
     <article
       class="bg-[#1a1f2e] p-5 w-[290px] sm:w-full sm:p-8 xl:w-full rounded-md"
     >
-      <h2 class="font-bold my-3 text-xl text-[#cacacd]">Quién Soy?</h2>
+      <h2 class="font-bold my-3 text-xl text-[#cacacd]">
+        {t("aboutme.who_i_am.title")}
+      </h2>
       <p class="mb-4 text-base text-balance">
-        Soy un Desarrollador fullstack con más de <span
-          class="text-[#b688ee] font-bold">1 año de experiencia</span
-        > en el mundo del desarrollo web. Originario de <span
-          class="text-[#b688ee] font-bold">Buenos Aires, Argentina</span
-        >, tengo <span class="text-[#b688ee] font-bold">21 años.</span>
+        {t("aboutme.paragraph1.prayer1")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer2")}</span
+        >
+        {t("aboutme.paragraph1.prayer3")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer4")}</span
+        >{t("aboutme.paragraph1.extra")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer5")}</span
+        >
       </p>
       <p class="text-base text-balance">
-        Mi enfoque se centra en la creación de <span
-          class="text-[#b688ee] font-bold"
-          >experiencias digitales excepcionales</span
-        > utilizando <span class="text-[#b688ee] font-bold"
-          >tecnologías modernas</span
-        > y las mejores prácticas de desarrollo. Me gusta <span
-          class="text-[#b688ee] font-bold"
-          >contribuir al mundo del código abierto</span
-        > y disfruto colaborar en <span class="text-[#b688ee] font-bold"
-          >proyectos open source</span
-        >, así como compartir conocimientos con la comunidad.
+        {t("aboutme.paragraph1.prayer6")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer7")}</span
+        >
+        {t("aboutme.paragraph1.prayer8")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer9")}</span
+        >
+        {t("aboutme.paragraph1.prayer10")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer11")}</span
+        >
+        {t("aboutme.paragraph1.prayer12")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph1.prayer13")}</span
+        >{t("aboutme.paragraph1.prayer14")}
       </p>
     </article>
 
     <article class="bg-[#1a1f2e] p-5 w-[290px] sm:w-full sm:p-8 xl:w-full">
       <h2 class="font-bold my-3 text-xl text-[#cacacd]">
-        Explorando Tecnologías
+        {t("aboutme.technologies.title")}
       </h2>
       <p class="mb-4 text-balance">
-        En mi día a día, me sumerjo en un conjunto de habilidades que abarcan
-        tecnologías como <span class="text-[#b688ee] font-bold">React</span>, <span
+        {t("aboutme.paragraph2.prayer1")}
+        <span class="text-[#b688ee] font-bold">React</span>, <span
           class="text-[#b688ee] font-bold">Next.js</span
         >, <span class="text-[#b688ee] font-bold">TypeScript</span>, <span
           class="text-[#b688ee] font-bold">Node.js</span
         >, <span class="text-[#b688ee] font-bold">Nest.js</span>, <span
           class="text-[#b688ee] font-bold">Express</span
-        >, y muchas otras. Siempre estoy en la búsqueda de aprender <span
-          class="text-[#b688ee] font-bold">nuevas tecnologías</span
-        > y mantenerme actualizado con las <span
-          class="text-[#b688ee] font-bold">tendencias del desarrollo</span
+        >, {t("aboutme.paragraph2.prayer2")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph2.prayer3")}</span
+        >
+        {t("aboutme.paragraph2.prayer4")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph2.prayer5")}</span
         >.
       </p>
       <p>
-        Mi pasión radica en discutir <span class="text-[#b688ee] font-bold"
-          >ideas</span
-        > y colaborar en <span class="text-[#b688ee] font-bold"
-          >proyectos innovadores</span
-        >. ¡Conéctate conmigo para compartir tus ideas y explorar nuevas
-        posibilidades!
+        {t("aboutme.paragraph2.prayer7")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph2.prayer8")}</span
+        >
+        {t("aboutme.paragraph2.prayer9")}
+        <span class="text-[#b688ee] font-bold"
+          >{t("aboutme.paragraph2.prayer10")}</span
+        >. {t("aboutme.paragraph2.prayer11")}
       </p>
     </article>
   </div>

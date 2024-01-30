@@ -1,6 +1,6 @@
 ---
+import { t } from "i18next";
 import SectionContainer from "../components/SectionContainer.astro";
-import "../styles/globals.css";
 import Css from "./icons/skills/Css.astro";
 import Express from "./icons/skills/Express.astro";
 import Jwt from "./icons/skills/Jwt.astro";
@@ -12,6 +12,7 @@ import React from "./icons/skills/React.astro";
 import Styled from "./icons/skills/Styled.astro";
 import Tailwind from "./icons/skills/Tailwind.astro";
 import Typescript from "./icons/skills/Typescript.astro";
+import "../styles/globals.css";
 
 const TAGS = {
   REACT: {
@@ -84,13 +85,14 @@ const PROJECTS = [
       TAGS.MONGODB,
       TAGS.JWT,
     ],
-    deploy: "https://www.linkedin.com/feed/update/urn:li:activity:7120866337538641920/",
-    Repositorio: "https://github.com/villarrealjoaquin/rooms"
+    deploy:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7120866337538641920/",
+    Repositorio: "https://github.com/villarrealjoaquin/rooms",
   },
   {
     name: "Travel Nest",
     image: "/138shots_so.webp",
-    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    description: `Plataforma de gestión de alquileres de departamentos, con funciones de reserva, registro y autenticación. Incorpora medidas de seguridad avanzadas con tokens de acceso y de actualización. Utiliza la API de Google Maps para la ubicación y ChatGPT para recomendaciones personalizadas de departamentos.`,
     technologies: [
       TAGS.REACT,
       TAGS.TYPESCRIPT,
@@ -104,7 +106,7 @@ const PROJECTS = [
   {
     name: "Reading List",
     image: "/885shots_so.webp",
-    description: `Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros.`,
+    description: `es una mini tienda la cual el usuario puede arrastrar y soltar el libro que desee a una lista de lectura. Tiene permanencia de datos con localStorage y sincronizacion entre pestañas. Esta hecho con react, typescript y styled components.`,
     technologies: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.STYLED],
     deploy: "https://pruebas-tecnicas-gold.vercel.app",
     github: "https://github.com/villarrealjoaquin/Reading-List",
@@ -112,10 +114,7 @@ const PROJECTS = [
   {
     name: "Reclama Smart (Proyecto Freelance)",
     image: "316shots_so.webp",
-    description: `Proyecto de juego de Pokémon donde los usuarios adivinan nombres
-            para ganar puntos. Utiliza React para la interfaz y una API externa
-            para obtener información de Pokémon. El objetivo es acumular la
-            mayor cantidad de puntos antes de perder toda la vida.`,
+    description: `Proyecto Freelance, creacion de sitio web para una start up de abogados`,
     technologies: [TAGS.NEXT, TAGS.TYPESCRIPT, TAGS.CSS],
     deploy: "https://reclama-smart.vercel.app",
     github: "https://github.com/villarrealjoaquin/reclama-smart",
@@ -134,12 +133,12 @@ const PROJECTS = [
 ];
 ---
 
-<SectionContainer id="proyects-section" class="mb-28">
+<SectionContainer id="proyects" class="mb-28">
   <h2 class="font-bold my-5 text-3xl text-[#cacacd]">Proyectos</h2>
   <ul class="flex flex-col gap-y-10">
     {
       PROJECTS.map(
-        ({ name, image, description, technologies, github, deploy }) => (
+        ({ name, image, description, technologies, github, deploy }, i) => (
           <li class="lg:flex justify-between gap-3 w-full">
             <img
               src={image}
@@ -149,10 +148,10 @@ const PROJECTS = [
             <article class="flex flex-col lg:w-1/2 justify-between h-[250px]">
               <div>
                 <h3 class="font-bold text-[#b688ee] my-3 lg:my-0 lg:mb-3 sm:text-base">
-                  {name}
+                  {t(`proyects.proyect${i + 1}.title`)}
                 </h3>
                 <p class="text-xs text-balance w-56 sm:w-72 md:w-[500px] lg:w-full sm:text-sm sm:text-pretty text-[#c4cee4]">
-                  {description}
+                  {t(`proyects.proyect${i + 1}.description`)}
                 </p>
               </div>
               <div class="mt-2 flex flex-col gap-2">
@@ -166,7 +165,7 @@ const PROJECTS = [
                       target="_blank"
                       class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
                     >
-                      Ver online
+                      {t("buttons.online")}
                     </a>
                   )}
                   <a
@@ -174,7 +173,7 @@ const PROJECTS = [
                     target="_blank"
                     class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
                   >
-                    Repositorio
+                    {t("buttons.repository")}
                   </a>
                 </div>
               </div>
@@ -190,7 +189,8 @@ const PROJECTS = [
       href="https://github.com/villarrealjoaquin?tab=repositories"
       target="_blank"
       class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
-      >Más Proyectos</a
     >
+      {t("buttons.more_proyects")}
+    </a>
   </article>
 </SectionContainer>

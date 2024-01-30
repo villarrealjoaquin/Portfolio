@@ -10,7 +10,7 @@ import Correo from "../components/icons/Correo.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Flag from "../components/icons/Flag.astro";
-import i18next, { t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("es");
 ---
@@ -21,7 +21,7 @@ changeLanguage("es");
 >
   <main class="w-[50%] m-auto">
     <SectionContainer
-      id="home-section"
+      id="home"
       class="flex flex-col items-center justify-center pt-20 h-[450px] gap-4"
     >
       <h1
@@ -89,15 +89,15 @@ changeLanguage("es");
 
       <article class="flex gap-2">
         <a
-          href="/#contact-section"
+          href="/#contact"
           class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >contáctame</a
+          >{t("buttons.contact")}</a
         >
         <a
           href="/cv.pdf"
           download="cv.pdf"
           class="bg-[#131a24] font-bold py-2 px-3 w-[100px] text-xs rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >Descargar cv</a
+          >{t("buttons.cv")}</a
         >
       </article>
       <Skills />

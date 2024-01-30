@@ -3,11 +3,117 @@
     "name": "Hi, I'm Joaquin Villarreal",
     "description": "Transforming ideas into digital experiences with code and creativity, specializing in elegant and user-centered web applications."
   },
-  "navbar": {
+  "sections": {
     "home": "Home",
     "experience": "Experience",
     "proyects": "Proyects",
     "about": "About me",
     "contact": "Contact"
+  },
+  "buttons": {
+    "contact": "contact me",
+    "cv": "Download cv",
+    "online": "View online",
+    "repository": "Repository",
+    "more_proyects": "More Projects"
+  },
+  "experiences": {
+    "vintex": {
+      "title": "Vintex",
+      "job_title": "Software Developer (Freelance)",
+      "time": "December 2023 - Present",
+      "description": "I work as a freelance and part-time software developer. I handle software development projects from time to time."
+    },
+    "fooTalent": {
+      "title": "Foo Talent",
+      "job_title": "Full Stack Developer",
+      "time": "July 2023 - November 2023",
+      "description": "I contributed to the development of interactive and secure web applications in a renowned law startup in Peru.",
+      "items": [
+        "Designed user interfaces to enhance the user experience on various devices.",
+        "Collaborated effectively in development teams, facilitating communication and problem-solving.",
+        "Continuously maintained and improved code quality and performance."
+      ]
+    },
+    "freelance": {
+      "title": "Freelance Developer",
+      "time": "March 2022 - Present",
+      "description": "I have been freelancing on various projects since March 2022."
+    }
+  },
+  "proyects": {
+    "proyect1": {
+      "title": "Expense Manager",
+      "description": "A simple and efficient expense manager created with Next.js to help you track income, expenses, and visualize your financial data."
+    },
+    "proyect2": {
+      "title": "Rooms (Real-Time Room Project)",
+      "description": "This is a real-time chat system project developed with the aim of implementing the Socket.io library and exploring technologies such as React, TypeScript, Node.js, Express, MongoDB, and JWT."
+    },
+    "proyect3": {
+      "title": "Travel Nest",
+      "description": "Platform for managing apartment rentals, with booking, registration, and authentication features. Incorporates advanced security measures with access and refresh tokens. Uses the Google Maps API for location and ChatGPT for personalized apartment recommendations."
+    },
+    "proyect4": {
+      "title": "Reading List",
+      "description": "It is a mini-store where users can drag and drop the desired book to a reading list. It has data persistence with localStorage and synchronization between tabs. It is built with React, TypeScript, and Styled Components."
+    },
+    "proyect5": {
+      "title": "Reclama Smart (Freelance Project)",
+      "description": "Freelance project, creation of a website for a startup of lawyers."
+    },
+    "proyect6": {
+      "title": "Pokemon Game 'Who Is That Pokemon'",
+      "description": "Pokémon game project where users guess names to earn points. It uses React for the interface and an external API to obtain Pokémon information. The goal is to accumulate the most points before losing all lives."
+    }
+  },
+  "aboutme": {
+    "who_i_am": {
+      "title": "Who i am?"
+    },
+    "paragraph1": {
+      "prayer1": "I am a fullstack developer with more than",
+      "prayer2": "1 year of experience",
+      "prayer3": "in the world of web development. Originally from",
+      "prayer4": "Buenos Aires, Argentina",
+      "prayer5": "21 years old.",
+      "prayer6": "My focus is on creating",
+      "prayer7": "exceptional digital experiences",
+      "prayer8": "using",
+      "prayer9": "modern technologies",
+      "prayer10": "and best development practices. I like",
+      "prayer11": "contributing to the open-source community",
+      "prayer12": "and enjoy collaborating on",
+      "prayer13": "open source projects",
+      "prayer14": ", as well as sharing knowledge with the community.",
+      "extra": ", I have"
+    },
+    "technologies": {
+      "title": "Exploring Technologies"
+    },
+    "paragraph2": {
+      "prayer1": "In my day-to-day, I immerse myself in a set of skills that encompass technologies like",
+      "prayer2": "and many others. I am always on the lookout to learn",
+      "prayer3": "new technologies",
+      "prayer4": "and stay updated with the",
+      "prayer5": "trends in development.",
+      "prayer7": "My passion lies in discussing",
+      "prayer8": "ideas",
+      "prayer9": "and collaborating on",
+      "prayer10": "innovative projects",
+      "prayer11": "Connect with me to share your ideas and explore new possibilities!"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "paragraph1": "Nice to meet you! If you have any questions, collaboration proposals, or just want to chat, feel free to get in touch with me.",
+    "paragraph2": "At the moment, I prefer to avoid creating forms to simplify the contact process. However, you can send me an email or connect with me on LinkedIn using the following links:",
+    "gmail": "Send Email",
+    "linkedin": "Connect with me on LinkedIn"
+  },
+  "footer": {
+    "text1": "Made with",
+    "text2": "and",
+    "text3": "by"
   }
 }
