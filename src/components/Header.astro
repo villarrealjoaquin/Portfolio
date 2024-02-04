@@ -27,7 +27,7 @@ const ROUTES = [
 ];
 
 const lang = i18next.language;
-const base = lang === 'es' ? '' : `/${lang}`;
+const base = lang === "es" ? "" : `/${lang}`;
 ---
 
 <header
@@ -66,11 +66,13 @@ const base = lang === 'es' ? '' : `/${lang}`;
     <ul
       class="flex justify-center flex-col items-center gap-5 h-full text-white font-bold"
     >
-      <li><a href="/#home">{t(`sections.home`)}</a></li>
-      <li><a href="/#experience">{t(`sections.experience`)}</a></li>
-      <li><a href="/#proyects">{t(`sections.proyects`)}</a></li>
-      <li><a href="/#aboutme">{t(`sections.about`)}</a></li>
-      <li><a href="/#contact">{t(`sections.contact`)}</a></li>
+      {
+        ROUTES.map(({ name, href }) => (
+          <li class="text-[#90939b] hover:text-purple-300 transition duration-300 ease-in-out cursor-pointer">
+            <a href={`${base}/${href}`}>{t(`sections.${name}`)}</a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </header>
