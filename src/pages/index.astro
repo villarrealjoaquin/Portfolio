@@ -1,16 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Skills from "../components/Skills.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Proyects.astro";
+import { changeLanguage } from "i18next";
 import AboutMe from "../components/About-me.astro";
 import Contact from "../components/Contact.astro";
-import Github from "../components/icons/Github.astro";
-import Correo from "../components/icons/Correo.astro";
-import Linkedin from "../components/icons/Linkedin.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import Flag from "../components/icons/Flag.astro";
-import { t, changeLanguage } from "i18next";
+import Experience from "../components/Experience.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Proyects.astro";
+import Layout from "../layouts/Layout.astro";
 
 changeLanguage("es");
 ---
@@ -20,88 +15,7 @@ changeLanguage("es");
   description="Soy un desarrollador de software con experiencia en la creación de soluciones. Mi portafolio refleja mi habilidad para diseñar y desarrollar aplicaciones web y móviles, así como mi compromiso con la excelencia técnica. Explora mi trabajo y descubre cómo mis habilidades pueden contribuir a tus proyectos."
 >
   <main class="w-[50%] m-auto">
-    <SectionContainer
-      id="home"
-      class="flex flex-col items-center justify-center pt-20 h-[450px] gap-4"
-    >
-      <h1
-        class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight"
-        style="opacity: 1; transform: none; color: #9b5de5; mix-blend-mode: screen;"
-      >
-        {t("home.name")}
-      </h1>
-      <div class="flex flex-col sm:flex-row gap-3 items-center">
-        <article>
-          <h2 class="font-bold text-center text-lg text-[#cacacd]">
-            Software Developer
-          </h2>
-        </article>
-        <div>
-          <Flag />
-        </div>
-      </div>
-      <p
-        class="text-[#8d93a1] text-sm w-[300px] sm:w-[350px] sm:text-base md:w-[450px] text-center"
-      >
-        Transformando ideas en experiencias digitales con código y creatividad,
-        especializado en aplicaciones web elegantes y centradas en el usuario.
-      </p>
-
-      <article class="flex justify-center items-center gap-3">
-        <div
-          class="relative hidden sm:block w-[100px] md:w-[150px] h-[2px] bg-[#9b5de5]"
-        >
-        </div>
-
-        <div class="sm:flex justify-center items-center gap-2">
-          <a
-            class="flex justify-center items-center gap-1 py-2 hover:text-[#9b5de5] hover:scale-x-105 transition"
-            href="https://github.com/villarrealjoaquin"
-            target="_blank"
-          >
-            <Github />
-            <span class="text-xs font-bold">Github</span>
-          </a>
-
-          <a
-            class="flex justify-center items-center gap-1 py-2 hover:text-[#9b5de5] hover:scale-x-105 transition"
-            href="https://www.linkedin.com/in/joaquin-villarreal-248711236/"
-            target="_blank"
-          >
-            <Linkedin />
-            <span class="text-xs font-bold">Linkedin</span>
-          </a>
-
-          <a
-            class="flex justify-center items-center gap-1 py-2 hover:text-[#9b5de5] hover:scale-x-105 transition"
-            href="mailto:villarrealjoaquin09@gmail.com"
-          >
-            <Correo />
-            <span class="text-xs font-bold">villarrealjoaquin09@gmail.com</span>
-          </a>
-        </div>
-
-        <div
-          class="relative hidden sm:block w-[100px] md:w-[150px] h-[2px] bg-[#9b5de5]"
-        >
-        </div>
-      </article>
-
-      <article class="flex gap-2">
-        <a
-          href="/#contact"
-          class="bg-[#131a24] text-xs font-bold py-2 px-3 rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >{t("buttons.contact")}</a
-        >
-        <a
-          href="/cv.pdf"
-          download="cv.pdf"
-          class="bg-[#131a24] font-bold py-2 px-3 w-[100px] text-xs rounded-sm transition duration-300 ease-in-out hover:bg-[#1E293B]"
-          >{t("buttons.cv")}</a
-        >
-      </article>
-      <Skills />
-    </SectionContainer>
+    <Hero />
     <Experience />
     <Projects />
     <AboutMe />
