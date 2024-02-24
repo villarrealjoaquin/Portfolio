@@ -13,6 +13,7 @@ import Styled from "./icons/skills/Styled.astro";
 import Tailwind from "./icons/skills/Tailwind.astro";
 import Typescript from "./icons/skills/Typescript.astro";
 import "../styles/globals.css";
+import Vitest from "./icons/skills/Vitest.astro";
 
 const TAGS = {
   REACT: {
@@ -59,9 +60,23 @@ const TAGS = {
     name: "css",
     icon: Css,
   },
+  VITEST: {
+    name: "vitest",
+    icon: Vitest,
+  },
 };
 
 const PROJECTS = [
+  {
+    name: "Rapid Format: Facilitando la conversión y visualización de datos",
+    image:
+      "https://media.discordapp.net/attachments/855925025730985995/1211058952863879279/image.png?ex=65ecd18a&is=65da5c8a&hm=e994f24899eb29577f72993bbd752e74aa4a7ed7d161512dbb3ca6e20e05fdea&=&format=webp&quality=lossless&width=1176&height=676",
+    description:
+      "Rapid Format es una herramienta web diseñada para simplificar la conversión y visualización de datos entre formatos JSON y objetos de programación en diversos lenguajes. Nuestra plataforma ofrece una interfaz intuitiva que permite a los usuarios ingresar datos JSON o estructuras de objetos y obtener una representación formateada, fácil de entender y lista para su implementación.",
+    technologies: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.VITEST],
+    deploy: "https://rapid-format.vercel.app",
+    github: "https://github.com/villarrealjoaquin/RapidFormat",
+  },
   {
     name: "Gestor de gastos",
     image: "/gestodegastos.webp",
@@ -137,50 +152,48 @@ const PROJECTS = [
   <h2 class="font-bold my-5 text-3xl text-[#cacacd]">Proyectos</h2>
   <ul class="flex flex-col gap-y-14">
     {
-      PROJECTS.map(
-        ({ name, image, technologies, github, deploy }, i) => (
-          <li class="lg:flex justify-between gap-3 w-full">
-            <img
-              src={image}
-              class="w-full h-auto lg:w-1/2 md:h-[250px] object-cover rounded-md"
-              alt={name}
-            />
-            <article class="flex flex-col lg:w-1/2 justify-between h-[250px]">
-              <div>
-                <h3 class="font-bold text-[#b688ee] my-3 lg:my-0 lg:mb-3 sm:text-base">
-                  {t(`proyects.proyect${i + 1}.title`)}
-                </h3>
-                <p class="text-xs text-balance w-56 sm:w-72 md:w-[500px] lg:w-full sm:text-sm sm:text-pretty text-[#c4cee4]">
-                  {t(`proyects.proyect${i + 1}.description`)}
-                </p>
+      PROJECTS.map(({ name, image, technologies, github, deploy }, i) => (
+        <li class="lg:flex justify-between gap-3 w-full">
+          <img
+            src={image}
+            class="w-full h-auto lg:w-1/2 md:h-[250px] object-cover rounded-md"
+            alt={name}
+          />
+          <article class="flex flex-col lg:w-1/2 justify-between h-[250px]">
+            <div>
+              <h3 class="font-bold text-[#b688ee] my-3 lg:my-0 lg:mb-3 sm:text-base">
+                {t(`proyects.proyect${i + 1}.title`)}
+              </h3>
+              <p class="text-xs text-balance w-56 sm:w-72 md:w-[500px] lg:w-full sm:text-sm sm:text-pretty text-[#c4cee4]">
+                {t(`proyects.proyect${i + 1}.description`)}
+              </p>
+            </div>
+            <div class="mt-2 flex flex-col gap-2">
+              <div class="flex items-center gap-2 w-48 md:w-full">
+                {technologies && technologies.map((tech) => <tech.icon />)}
               </div>
-              <div class="mt-2 flex flex-col gap-2">
-                <div class="flex items-center gap-2 w-48 md:w-full">
-                  {technologies && technologies.map((tech) => <tech.icon />)}
-                </div>
-                <div class="flex gap-2">
-                  {deploy && (
-                    <a
-                      href={deploy}
-                      target="_blank"
-                      class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
-                    >
-                      {t("buttons.online")}
-                    </a>
-                  )}
+              <div class="flex gap-2">
+                {deploy && (
                   <a
-                    href={github}
+                    href={deploy}
                     target="_blank"
                     class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
                   >
-                    {t("buttons.repository")}
+                    {t("buttons.online")}
                   </a>
-                </div>
+                )}
+                <a
+                  href={github}
+                  target="_blank"
+                  class="bg-[#131a24] font-bold py-2 px-3 text-xs rounded-lg transition duration-300 ease-in-out hover:bg-[#1E293B]"
+                >
+                  {t("buttons.repository")}
+                </a>
               </div>
-            </article>
-          </li>
-        )
-      )
+            </div>
+          </article>
+        </li>
+      ))
     }
   </ul>
 

@@ -43,26 +43,30 @@
   },
   "proyects": {
     "proyect1": {
+      "title": "Rapid Format",
+      "description": "Is a web tool that simplifies converting and visualizing data between JSON formats and programming objects in multiple languages. Our platform offers an intuitive interface for users to input JSON data, obtain a formatted representation, and easily implement it. It also features testing with Playwright."
+    },
+    "proyect2": {
       "title": "Expense Manager",
       "description": "A simple and efficient expense manager created with Next.js to help you track income, expenses, and visualize your financial data."
     },
-    "proyect2": {
+    "proyect3": {
       "title": "Rooms (Real-Time Room Project)",
       "description": "This is a real-time chat system project developed with the aim of implementing the Socket.io library and exploring technologies such as React, TypeScript, Node.js, Express, MongoDB, and JWT."
     },
-    "proyect3": {
+    "proyect4": {
       "title": "Travel Nest",
       "description": "Platform for managing apartment rentals, with booking, registration, and authentication features. Incorporates advanced security measures with access and refresh tokens. Uses the Google Maps API for location and ChatGPT for personalized apartment recommendations."
     },
-    "proyect4": {
+    "proyect5": {
       "title": "Reading List",
       "description": "It is a mini-store where users can drag and drop the desired book to a reading list. It has data persistence with localStorage and synchronization between tabs. It is built with React, TypeScript, and Styled Components."
     },
-    "proyect5": {
+    "proyect6": {
       "title": "Reclama Smart (Freelance Project)",
       "description": "Freelance project, creation of a website for a startup of lawyers."
     },
-    "proyect6": {
+    "proyect7": {
       "title": "Pokemon Game 'Who Is That Pokemon'",
       "description": "Pokémon game project where users guess names to earn points. It uses React for the interface and an external API to obtain Pokémon information. The goal is to accumulate the most points before losing all lives."
     }

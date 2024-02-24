@@ -43,26 +43,30 @@
   },
   "proyects": {
     "proyect1": {
+      "title": "Rapid Format",
+      "description": "Una herramienta web que simplifica la conversión y visualización de datos entre formatos JSON y objetos. Nuestra plataforma cuenta con una interfaz intuitiva para que los usuarios ingresen datos JSON o estructuras de objetos y obtengan una representación formateada, fácil de entender y lista para implementar. Además, incluye tests usando Playwright."
+    },
+    "proyect2": {
       "title": "Gestor de gastos",
       "description": "Un administrador de gastos simple y eficiente creado con Next.js para ayudarlo a realizar un seguimiento de los ingresos, los gastosy visualizar sus datos financieros."
     },
-    "proyect2": {
+    "proyect3": {
       "title": "Rooms (Proyecto de Salas en Tiempo Real)",
       "description": "Este es un proyecto de sistema de chat en tiempo real desarrollado con el objetivo de implementar la libreria de Socket.io y explorar tecnologías como React, TypeScript, Node.js, Express, MongoDB y JWT."
     },
-    "proyect3": {
+    "proyect4": {
       "title": "Travel Nest - Proyecto Open source",
       "description": "Plataforma de gestión de alquileres de departamentos, con funciones de reserva, registro y autenticación. Incorpora medidas de seguridad avanzadas con tokens de acceso y de actualización. Utiliza la API de Google Maps para la ubicación y ChatGPT para recomendaciones personalizadas de departamentos."
     },
-    "proyect4": {
+    "proyect5": {
       "title": "Reading List",
       "description": "es una mini tienda la cual el usuario puede arrastrar y soltar el libro que desee a una lista de lectura. Tiene permanencia de datos con localStorage y sincronizacion entre pestañas. Esta hecho con react, typescript y styled components."
     },
-    "proyect5": {
+    "proyect6": {
       "title": "Reclama Smart (Proyecto Freelance)",
       "description": "Proyecto Freelance, creacion de sitio web para una start up de abogados."
     },
-    "proyect6": {
+    "proyect7": {
       "title": "Pokemon game 'who is that pokemon'",
       "description": "Proyecto de juego de Pokémon donde los usuarios adivinan nombres para ganar puntos. Utiliza React para la interfaz y una API externa para obtener información de Pokémon. El objetivo es acumular la mayor cantidad de puntos antes de perder toda la vida."
     }
