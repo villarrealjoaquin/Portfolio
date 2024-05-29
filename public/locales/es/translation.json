@@ -18,6 +18,13 @@
     "more_proyects": "Más Proyectos"
   },
   "experiences": {
+    "storydots" : {
+      "title": "StoryDots",
+      "job_title": "Full Stack developer",
+      "time": "abril 2024 - actualidad",
+      "description":
+      "En Story Dots, mi enfoque se centra en el desarrollo de aplicaciones en la nube orientadas al comercio electrónico, con énfasis en plataformas populares como Tienda Nube y Shopify, entre otras."
+    },
     "vintex": {
       "title": "Vintex",
       "job_title": "Desarrollador de Software (Freelance)",

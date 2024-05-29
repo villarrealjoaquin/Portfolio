@@ -4,6 +4,14 @@ import SectionContainer from "../components/SectionContainer.astro";
 
 const EXPERIECES = [
   {
+    title: "StoryDots",
+    job_title: "Full Stack-developer",
+    time: "abril 2024 – actualidad",
+    description:
+      "En Story Dots, mi enfoque se centra en el desarrollo de aplicaciones en la nube orientadas al comercio electrónico, con énfasis en plataformas populares como Tienda Nube y Shopify, entre otras.",
+    key: "storydots",
+  },
+  {
     title: "Vintex",
     job_title: "Desarrollador de Software (Freelance)",
     time: "Diciembre 2023 - Actualidad",
@@ -34,7 +42,9 @@ const EXPERIECES = [
 ---
 
 <SectionContainer id="experience" class="my-28">
-  <h2 class="font-bold my-5 text-3xl text-[#cacacd]">{t("sections.experience")}</h2>
+  <h2 class="font-bold my-5 text-3xl text-[#cacacd]">
+    {t("sections.experience")}
+  </h2>
   <ol class="relative border-s border-gray-200 dark:border-gray-700">
     {
       EXPERIECES.map(({ job_title, items, key }) => (
